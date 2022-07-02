@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carbon Footprint Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#242582">
+    <div class="row-xxl container text-center mt-2">
+        <p class="display-4 blockqoute " style="color:white"><strong><strong>Carbon Footprint
+                    Calculator</strong></strong></p>
+    </div>
+    <div class="col-xxl container mt-5 p-3 rounded-5" style="background-color: #3feee6;">
+        <div class="row">
+            <p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q1.The numbers of members in your household are :</p>
+        </div>
+    <div class="col-xxl container" id="options">
+        <div class="row container">
+            <button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="person('alone');">a) You live alone.</button>
+        </div>
+        <div class="row container">
+            <button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="person('one')">b) You live 1 other person.</button>
+        </div>
+        <div class="row container"><button class="btn btn-lg btn-outline rounded-5"
+                style="color:#242582; text-align: left;margin-left:1rem;"onclick="person('two')">c) You live 2 other people.</button></div>
+        <div class="row container"><button class="btn btn-lg btn-outline rounded-5"
+                style="color:#242582; text-align: left;margin-left:1rem;"onclick="person('three')">d) You live 3 other people.</button></div>
+        <div class="row container"><button class="btn btn-lg btn-outline rounded-5"
+                style="color:#242582; text-align: left;margin-left:1rem;"onclick="person('four')">e) You live 4 other people.</button></div>
+        <div class="row container"><button class="btn btn-lg btn-outline rounded-5"
+                style="color:#242582; text-align: left;margin-left:1rem;"onclick="person('five')">f) You live 5 other people.</button></div>
+        <div class="row container"><button class="btn btn-lg btn-outline rounded-5"
+                style="color:#242582; text-align: left;margin-left:1rem;"onclick="person('more')">g) You live with more than 5 people.</button>
+        </div>
+    </div>
+    </div>
+    <p class="display-4 blockqoute " style="color:white" id="carbon"></p>
+<script src="working.js"></script>
+</body>
+
+</html>
