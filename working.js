@@ -128,6 +128,31 @@ function garbage(x){
     else if(x==5){
         carbon=carbon+5;
     }
+    document.getElementById('carbon').innerHTML=carbon;
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q7.How much waste you recycle :</p>';
-    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(1);">a) You do not recycle.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;">b) You recycle the following.</button></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Glass</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Plastic</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Paper</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Aluminium</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Steel</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Food Waste(Composting)</input></div>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="rec();">a) You do not recycle.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;">b) You recycle the following.</button></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass"  style="margin-right:.5rem;"type="radio">Glass</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="plastic" style="margin-right:.5rem;"type="radio">Plastic</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="paper"  style="margin-right:.5rem;"type="radio">Paper</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="alum" style="margin-right:.5rem;"type="radio">Aluminium</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="steel" style="margin-right:.5rem;"type="radio">Steel</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="compost" style="margin-right:.5rem;"type="radio">Food Waste(Composting)</input></div><input type="reset" class="btn btn-outline rounded-5" style="color:#242582;margin-left:5rem;" onclick="garbage(1);" ><button name="submit" class="btn btn-outline rounded-5" style="color:#242582;" onclick="rec()">Submit</button>';
+}
+function rec(){
+    carbon=carbon+24;
+    if (document.getElementById('glass').checked == true){
+        carbon=carbon-4;
+    }
+    if (document.getElementById('plastic').checked == true){
+        carbon=carbon-4;
+    }
+    if (document.getElementById('paper').checked == true){
+        carbon=carbon-4;
+    }
+    if (document.getElementById('alum').checked == true){
+        carbon=carbon-4;
+    }
+    if (document.getElementById('steel').checked == true){
+        carbon=carbon-4;
+    }
+    if (document.getElementById('compost').checked == true){
+        carbon=carbon-4;
+    }
+    document.getElementById('carbon').innerHTML=carbon;
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q8.What is your personal vehicle usage :</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(1);">a) You travel more than 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(2)">b) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(3)">c) You travel 1,610 to 16,100 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(4)">d) You travel less than 1,610 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(5)">e) You do not have a car.</button></div>';
 }
