@@ -1,6 +1,14 @@
 var carbon;
 var x;
 carbon = 0;
+document.getElementById("ques").style.display = "none";
+document.getElementById("options").style.display = "none";
+function start(){
+    document.getElementById("start").style.display = "none";
+    document.getElementById("START").style.display = "none";
+    document.getElementById("ques").style.display = "block";
+    document.getElementById("options").style.display = "block";
+}
 function person(x) {
     if (x == 'alone') {
         carbon = carbon + 14;
@@ -65,5 +73,9 @@ function food(x){
     else if(x==7){
         carbon=carbon+2;
     }
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q4.Examine Your Water Consumption :</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(1);">a) You run you washing machine more than 9 times per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(2)">b) You run it 4 to 9 times per week .</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(3)">c) If you run it 1 to 3 times per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(4)">d) You do not have washing machine and wash clothes by yourself.</button></div>';
+}
+function water(x){
     
 }
