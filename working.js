@@ -3,6 +3,7 @@ var x;
 carbon = 0;
 document.getElementById("ques").style.display = "none";
 document.getElementById("options").style.display = "none";
+
 function start(){
     document.getElementById("start").style.display = "none";
     document.getElementById("START").style.display = "none";
@@ -77,5 +78,5 @@ function food(x){
     document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(1);">a) You run you washing machine more than 9 times per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(2)">b) You run it 4 to 9 times per week .</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(3)">c) If you run it 1 to 3 times per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(4)">d) You do not have washing machine and wash clothes by yourself.</button></div>';
 }
 function water(x){
-    
+
 }
