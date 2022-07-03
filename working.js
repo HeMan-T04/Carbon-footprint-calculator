@@ -78,5 +78,38 @@ function food(x){
     document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(1);">a) You run you washing machine more than 9 times per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(2)">b) You run it 4 to 9 times per week .</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(3)">c) If you run it 1 to 3 times per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="water(4)">d) You do not have washing machine and wash clothes by yourself.</button></div>';
 }
 function water(x){
+    if(x==1){
+        carbon=carbon+3;
+    }
+    else if(x==2){
+        carbon=carbon+2;
+    }
+    else if(x==3){
+        carbon=carbon+1;
+    }
+    else if(x==4){
+        carbon=carbon+4;
+    }
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q5.How many household purchases you make each year:</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(1);">a) If you buy more than 7 new pieces of furniture, electronics, or other household gadgets per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(2)">b) If you purchase between 5 and 7 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(3)">c) If you purchase between 3 and 5 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(4)">d) If you purchase less than 3 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(5)">e) If you purchase almost nothing or only secondhand items.</button></div>';
+}
+function purchase(x){
+    if(x==1){
+        carbon=carbon+10;
+    }
+    else if(x==2){
+        carbon=carbon+8;
+    }
+    else if(x==3){
+        carbon=carbon+6;
+    }
+    else if(x==4){
+        carbon=carbon+4;
+    }
+    else if(x==5){
+        carbon=carbon+2;
+    }
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q6.How much waste you produce :</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(1);">a) If you buy more than 7 new pieces of furniture, electronics, or other household gadgets per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(2)">b) If you purchase between 5 and 7 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(3)">c) If you purchase between 3 and 5 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(4)">d) If you purchase less than 3 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(5)">e) If you purchase almost nothing or only secondhand items.</button></div>';
 
 }
