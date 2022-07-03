@@ -128,7 +128,6 @@ function garbage(x){
     else if(x==5){
         carbon=carbon+5;
     }
-    document.getElementById('carbon').innerHTML=carbon;
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q7.How much waste you recycle :</p>';
     document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="rec();">a) You do not recycle.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;">b) You recycle the following.</button></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass"  style="margin-right:.5rem;"type="radio">Glass</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="plastic" style="margin-right:.5rem;"type="radio">Plastic</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="paper"  style="margin-right:.5rem;"type="radio">Paper</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="alum" style="margin-right:.5rem;"type="radio">Aluminium</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="steel" style="margin-right:.5rem;"type="radio">Steel</input></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="compost" style="margin-right:.5rem;"type="radio">Food Waste(Composting)</input></div><input type="reset" class="btn btn-outline rounded-5" style="color:#242582;margin-left:5rem;" onclick="garbage(1);" ><button name="submit" class="btn btn-outline rounded-5" style="color:#242582;" onclick="rec()">Submit</button>';
 }
@@ -153,7 +152,6 @@ function rec(){
     if (document.getElementById('compost').checked == true){
         carbon=carbon-4;
     }
-    document.getElementById('carbon').innerHTML=carbon;
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q8.What is your personal vehicle usage :</p>';
     document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(1);">a) You travel more than 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(2)">b) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(3)">c) You travel 1,610 to 16,100 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(4)">d) You travel less than 1,610 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(5)">e) You do not have a car.</button></div>';
 }
@@ -171,5 +169,35 @@ function personal(x){
         carbon=carbon+4;
     }
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q9.How much you travel in public transportation :</p>';
-    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(1);">a) You travel more than 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(2)">b) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(3)">c) You travel 1,610 to 16,100 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(4)">d) You travel less than 1,610 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(5)">e) You do not have a car.</button></div>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="public(1);">a) You travel more than 32,190 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="public(2)">b) You travel 24,140 to 32,190 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="public(3)">c) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="public(4)">d) You travel 1,610 to 16,100 miles per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="public(5)">e) You travel less than 1,610 km.</button></div>';
+}
+function public(x){
+    if(x==1){
+        carbon=carbon+12;
+    }
+    else if(x==2){
+        carbon=carbon+10;
+    }
+    else if(x==3){
+        carbon=carbon+6;
+    }
+    else if(x==4){
+        carbon=carbon+4;
+    }
+    else if(x==5){
+        carbon=carbon+2;
+    }
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q10.Flights distances you travel within a year :</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(1);">a) You only travel short distances in 1 year, such as within your state.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(2)">b) You travel further distances, such as to a nearby state or country.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(3)">c) You     travel far, such as to another continent.</button></div>';
+}
+function flight(x){
+    if(x==1){
+        carbon=carbon+2;
+    }
+    else if(x==2){
+        carbon=carbon+6;
+    }
+    else if(x==3){
+        carbon=carbon+20;
+    }
 }
