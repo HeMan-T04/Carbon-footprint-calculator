@@ -91,7 +91,7 @@ function water(x){
         carbon=carbon+4;
     }
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q5.How many household purchases you make each year:</p>';
-    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(1);">a) If you buy more than 7 new pieces of furniture, electronics, or other household gadgets per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(2)">b) If you purchase between 5 and 7 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(3)">c) If you purchase between 3 and 5 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(4)">d) If you purchase less than 3 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(5)">e) If you purchase almost nothing or only secondhand items.</button></div>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(1);">a) You buy more than 7 new pieces of furniture, electronics, or other household gadgets per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(2)">b) You purchase between 5 and 7 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(3)">c) You purchase between 3 and 5 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(4)">d) You purchase less than 3 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(5)">e) You purchase almost nothing or only secondhand items.</button></div>';
 }
 function purchase(x){
     if(x==1){
@@ -110,6 +110,24 @@ function purchase(x){
         carbon=carbon+2;
     }
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q6.How much waste you produce :</p>';
-    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(1);">a) If you buy more than 7 new pieces of furniture, electronics, or other household gadgets per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(2)">b) If you purchase between 5 and 7 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(3)">c) If you purchase between 3 and 5 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(4)">d) If you purchase less than 3 items.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="purchase(5)">e) If you purchase almost nothing or only secondhand items.</button></div>';
-
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(1);">a) You fill 4 garbage cans each week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(2)">b) You fill 3 garbage cans each week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(3)">c) You fill 2 garbage cans per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(4)">d) You fill 1 garbage can per week.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(5)">e) You fill half of a garbage can or less per week.</button></div>';
+}
+function garbage(x){
+    if(x==1){
+        carbon=carbon+50;
+    }
+    else if(x==2){
+        carbon=carbon+40;
+    }
+    else if(x==3){
+        carbon=carbon+30;
+    }
+    else if(x==4){
+        carbon=carbon+20;
+    }
+    else if(x==5){
+        carbon=carbon+5;
+    }
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q7.How much waste you recycle :</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(1);">a) You do not recycle.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;">b) You recycle the following.</button></div><div class="row-2 container input-group" style="color:#242582; text-align: left; margin-left:3rem;"><input class="form-check-input"  id="glass" value="Glass" style="margin-right:.5rem;"type="radio">Glass</input></div>';
 }
