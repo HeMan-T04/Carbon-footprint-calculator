@@ -155,5 +155,21 @@ function rec(){
     }
     document.getElementById('carbon').innerHTML=carbon;
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q8.What is your personal vehicle usage :</p>';
-    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(1);">a) You travel more than 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(2)">b) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(3)">c) You travel 1,610 to 16,100 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(4)">d) You travel less than 1,610 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="garbage(5)">e) You do not have a car.</button></div>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(1);">a) You travel more than 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(2)">b) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(3)">c) You travel 1,610 to 16,100 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(4)">d) You travel less than 1,610 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(5)">e) You do not have a car.</button></div>';
+}
+function personal(x){
+    if(x==1){
+        carbon=carbon+12;
+    }
+    else if(x==2){
+        carbon=carbon+10;
+    }
+    else if(x==3){
+        carbon=carbon+6;
+    }
+    else if(x==4){
+        carbon=carbon+4;
+    }
+    document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q9.How much you travel in public transportation :</p>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(1);">a) You travel more than 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(2)">b) You travel 16,100 to 24,140 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(3)">c) You travel 1,610 to 16,100 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(4)">d) You travel less than 1,610 km per year.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="personal(5)">e) You do not have a car.</button></div>';
 }
