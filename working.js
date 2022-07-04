@@ -3,7 +3,10 @@ var x;
 carbon = 0;
 document.getElementById("ques").style.display = "none";
 document.getElementById("options").style.display = "none";
-
+document.getElementById("result1").style.display = "none";
+document.getElementById("result2").style.display = "none";
+document.getElementById("result3").style.display = "none";
+document.getElementById("result4").style.display = "none";
 function start(){
     document.getElementById("start").style.display = "none";
     document.getElementById("START").style.display = "none";
@@ -188,8 +191,10 @@ function public(x){
         carbon=carbon+2;
     }
     document.getElementById("ques").innerHTML = '<p class="display-6 text-center blockqoute" style="color:#242582" id="ques">Q10.Flights distances you travel within a year :</p>';
-    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(1);">a) You only travel short distances in 1 year, such as within your state.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(2)">b) You travel further distances, such as to a nearby state or country.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(3)">c) You     travel far, such as to another continent.</button></div>';
+    document.getElementById("options").innerHTML = '<div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(1);">a) You only travel short distances in 1 year, such as within your state.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(2)">b) You travel further distances, such as to a nearby state or country.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(3)">c) You     travel far, such as to another continent.</button></div><div class="row container"><button class="btn btn-lg btn-outline rounded-5" style="color:#242582; text-align: left;margin-left:1rem;" onclick="flight(4)">c) You do not travel in flights.</button></div>';
 }
+var y;
+var z;
 function flight(x){
     if(x==1){
         carbon=carbon+2;
@@ -200,4 +205,28 @@ function flight(x){
     else if(x==3){
         carbon=carbon+20;
     }
+    document.getElementById("ques").style.display = "none";
+    document.getElementById("options").style.display = "none"; 
+    y='<p class="display-6 text-center" style="color:#242582">Your total score is</p>'; 
+    if(carbon<=60){
+        z='<p class="display-6 text-center" style="color:#242582">You are making a small impact on our planet <br> Thank you so much for your support</p>'
+    }
+    else if(carbon>60 && carbon<100){
+        z='<p class="display-6 text-center" style="color:#242582">You are making a medium sized impact on our planet <br> If reduced now can contribute to environment more<br> Thank you so much for your support</p>'
+        document.getElementById("result4").style.display = "block";
+        document.getElementById("result4").innerHTML = '<a class="btn btn-lg rounded-5" style="color:#242582; margin-left:.6rem;" href="https://www.wikihow.com/Reduce-Your-Carbon-Footprint" target="_blank">Ways to reduce your carbon footprint</a>';
+
+    }
+    else if(carbon>100){
+        z='<p class="display-6 text-center" style="color:#242582">You are highly impacting our planet<br> I highly suggest to check how to reduce your carbon footprint<br> and apply them in your daily life<br> Thank you so much for your support</p>';
+        document.getElementById("result4").style.display = "block";
+        document.getElementById("result4").innerHTML = '<a class="btn btn-lg rounded-5" style="color:#242582; margin-left:.6rem;" href="https://www.wikihow.com/Reduce-Your-Carbon-Footprint" target="_blank">Ways to reduce your carbon footprint</a>';
+    }
+    document.getElementById("result1").style.display = "block";
+    document.getElementById("result2").style.display = "block";
+    document.getElementById("result3").style.display = "block";
+    document.getElementById("result1").innerHTML=y;
+    document.getElementById("result2").innerHTML=carbon;
+    document.getElementById("result3").innerHTML=z;
+
 }
