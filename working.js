@@ -7,6 +7,7 @@ document.getElementById("result1").style.display = "none";
 document.getElementById("result2").style.display = "none";
 document.getElementById("result3").style.display = "none";
 document.getElementById("result4").style.display = "none";
+document.getElementById("made").style.display = "none";
 function start(){
     document.getElementById("start").style.display = "none";
     document.getElementById("START").style.display = "none";
@@ -207,21 +208,22 @@ function flight(x){
     }
     document.getElementById("ques").style.display = "none";
     document.getElementById("options").style.display = "none"; 
-    y='<p class="display-6 text-center" style="color:#242582">Your total score is</p>'; 
+    y='<p class="display-6 text-center" style="color:#242582;margin-left:1rem">Your total score is</p>'; 
     if(carbon<=60){
-        z='<p class="display-6 text-center" style="color:#242582">You are making a small impact on our planet <br> Thank you so much for your support</p>'
+        z='<p class="display-6 text-center" style="color:#242582;margin-left:1rem">You are making a small impact on our planet <br> Thank you so much for your support</p>'
     }
     else if(carbon>60 && carbon<100){
-        z='<p class="display-6 text-center" style="color:#242582">You are making a medium sized impact on our planet <br> If reduced now can contribute to environment more<br> Thank you so much for your support</p>'
+        z='<p class="display-6 text-center" style="color:#242582;margin-left:1rem">You are making a medium sized impact on our planet <br> If reduced now can contribute to environment more<br> Thank you so much for your support</p>'
         document.getElementById("result4").style.display = "block";
         document.getElementById("result4").innerHTML = '<a class="btn btn-lg rounded-5" style="color:#242582; margin-left:.6rem;" href="https://www.wikihow.com/Reduce-Your-Carbon-Footprint" target="_blank">Ways to reduce your carbon footprint</a>';
 
     }
     else if(carbon>100){
-        z='<p class="display-6 text-center" style="color:#242582">You are highly impacting our planet<br> I highly suggest to check how to reduce your carbon footprint<br> and apply them in your daily life<br> Thank you so much for your support</p>';
+        z='<p class="display-6 text-center" style="color:#242582;margin-left:1rem">You are highly impacting our planet<br> I highly suggest to check how to reduce your carbon footprint<br> and apply them in your daily life<br> Thank you so much for your support</p>';
         document.getElementById("result4").style.display = "block";
         document.getElementById("result4").innerHTML = '<a class="btn btn-lg rounded-5" style="color:#242582; margin-left:.6rem;" href="https://www.wikihow.com/Reduce-Your-Carbon-Footprint" target="_blank">Ways to reduce your carbon footprint</a>';
     }
+    document.getElementById("made").style.display = "block";
     document.getElementById("result1").style.display = "block";
     document.getElementById("result2").style.display = "block";
     document.getElementById("result3").style.display = "block";
